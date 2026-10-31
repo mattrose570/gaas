@@ -41,6 +41,23 @@
                             </button>
                         </form>
                     </div>
+                } 
+                
+                @if (User.Identity?.IsAuthenticated != true)
+                {
+                    <div class="d-flex align-items-center gap-2">
+                        <a asp-controller="Auth"
+                           asp-action="Login"
+                           class="btn btn-primary">
+                            Login
+                        </a>
+
+                        <a asp-controller="Auth"
+                           asp-action="SignUp"
+                           class="btn btn-secondary">
+                            Sign Up
+                        </a>
+                    </div>
                 }
             </div>
         </div>

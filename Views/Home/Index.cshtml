@@ -5,14 +5,6 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    
-    <div style="display: flex; gap: 10px;">
-        <a asp-controller="Auth" asp-action="Login"
-           class="btn btn-primary">Login</a>
-
-        <a asp-controller="Auth" asp-action="SignUp"
-           class="btn btn-secondary">Sign Up</a>
-    </div>
 
 </div>
 
@@ -20,7 +12,7 @@
     <form asp-controller="GaaS"
           asp-action="GetGuid"
           method="post"
-          onsubmit="getGuid(Event)">
+          onsubmit="getGuid(event)">
 
         <button type="submit">Generate and save GUID</button>
     </form>
