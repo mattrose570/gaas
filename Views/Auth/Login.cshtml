@@ -1,18 +1,19 @@
-@model TModel
+@model gaas.Models.LoginViewModel
 
-@{
-    Layout = null;
-}
+<h2>Login</h2>
 
-<!DOCTYPE html>
+<form asp-controller="Auth" asp-action="Login" method="post">
+    <div asp-validation-summary="All"></div>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" autocomplete="username" />
+    </div>
+
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" autocomplete="current-password" />
+    </div>
+
+    <button type="submit">Login</button>
+</form>
